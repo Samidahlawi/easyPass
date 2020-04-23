@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
-import { Container,Row,Col,Image,Tabs,Tab,Sonnet } from 'react-bootstrap';
-import { FaBeer } from 'react-icons/fa';
+import { Container,Row,Col,Image,Tabs,Tab } from 'react-bootstrap';
 
 class Profile extends Component{
+    constructor(){
+        super()
+        clearInterval();
+    }
     render(){
         return(
             <div>

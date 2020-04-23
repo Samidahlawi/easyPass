@@ -6,10 +6,11 @@ class Qrcode extends Component{
     render(){
         return(
             <div>
-                <Link to="/profile">
-                   <img className="qr-code" src={QRcode} alt="QRcode" />
-                   </Link>
+                    
+                        <img className="qr-code" src={QRcode} alt="QRcode" />
+                  
             </div>
+
         )
     }
 

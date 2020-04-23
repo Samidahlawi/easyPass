@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 class Timer extends Component{
 
-    state = {};
+   
     constructor(){
         super()
         this.state = {
@@ -16,16 +16,10 @@ class Timer extends Component{
         
     }
 
-    // componentWillMount(){
-
-    //     this.setState({
-    //         word : this.state.words[new Date().getDay() + new Date().getMinutes()]
-    //     }) 
-    // }
 
    
 
-    componentDidMount() {
+    componentDidMount = () => {
 
         setInterval(() => {
             let copyState = {...this.state}
@@ -47,7 +41,6 @@ class Timer extends Component{
     render(){
         return(
             <div className="timer">
-                {/* <h1>Current Time</h1> */}
                 <h1>{this.state.show ? this.state.date.toLocaleTimeString([],{ hour: '2-digit', minute: '2-digit' }) :this.state.word ? this.state.word:this.state.words[new Date().getDay()]}</h1>
             </div>
         )
